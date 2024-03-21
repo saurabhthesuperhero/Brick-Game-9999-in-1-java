@@ -1,0 +1,1832 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.result,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.result td,table.result th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.result th {vertical-align:bottom}
+tr.param th {padding-left:1em;padding-right:1em}
+tr.param td {padding-left:.5em;padding-right:2em}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.result td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.result tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Command line test</td><td class="numi">240</td><td class="numi">240</td><td class="numi">0</td><td class="numi">0</td><td class="numi">2.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="passed" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Command line test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="8">com.github.vitalibo.brickgame.game.tetris.BoardTest</td><td><a href="#m1"><b>testAdd</b>  </a></td><td class="numi">1</td><td>1711001368794</td><td class="numi">10</td></tr><tr class="passedodd"><td><a href="#m2"><b>testCleanUp</b>  </a></td><td class="numi">1</td><td>1711001368804</td><td class="numi">4</td></tr><tr class="passedodd"><td><a href="#m3"><b>testInit</b>  </a></td><td class="numi">4</td><td>1711001368809</td><td class="numi">4</td></tr><tr class="passedodd"><td><a href="#m4"><b>testInit</b>  </a></td><td class="numi">4</td><td>1711001368809</td><td class="numi">4</td></tr><tr class="passedodd"><td><a href="#m5"><b>testInit</b>  </a></td><td class="numi">4</td><td>1711001368809</td><td class="numi">4</td></tr><tr class="passedodd"><td><a href="#m6"><b>testInit</b>  </a></td><td class="numi">4</td><td>1711001368809</td><td class="numi">4</td></tr><tr class="passedodd"><td><a href="#m7"><b>testIsFull</b>  </a></td><td class="numi">1</td><td>1711001368813</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m8"><b>testVerify</b>  </a></td><td class="numi">1</td><td>1711001368814</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="2">com.github.vitalibo.brickgame.util.BooleanCollectorTest</td><td><a href="#m9"><b>testToArray</b>  </a></td><td class="numi">1</td><td>1711001368815</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m10"><b>testToTwoDimensionalArray</b>  </a></td><td class="numi">1</td><td>1711001368815</td><td class="numi">1</td></tr>
+<tr class="passedodd"><td rowspan="51">com.github.vitalibo.brickgame.core.ui.BrickPanelTest</td><td><a href="#m11"><b>testBrickSize</b>  </a></td><td class="numi">1</td><td>1711001369071</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m12"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m13"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m14"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m15"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m16"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m17"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m18"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m19"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m20"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m21"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m22"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m23"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m24"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m25"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m26"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m27"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m28"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m29"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m30"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m31"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m32"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m33"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m34"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m35"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m36"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m37"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m38"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m39"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m40"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m41"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m42"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m43"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m44"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m45"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m46"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m47"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m48"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m49"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m50"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m51"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m52"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m53"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m54"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m55"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m56"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m57"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m58"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m59"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m60"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m61"><b>testDraw</b>  </a></td><td class="numi">50</td><td>1711001369075</td><td class="numi">67</td></tr>
+<tr class="passedeven"><td rowspan="4">com.github.vitalibo.brickgame.core.ui.BrickTest</td><td><a href="#m62"><b>testNotRepaint</b>  </a></td><td class="numi">1</td><td>1711001369901</td><td class="numi">4</td></tr><tr class="passedeven"><td><a href="#m63"><b>testPaintState</b>  </a></td><td class="numi">2</td><td>1711001369906</td><td class="numi">57</td></tr><tr class="passedeven"><td><a href="#m64"><b>testPaintState</b>  </a></td><td class="numi">2</td><td>1711001369906</td><td class="numi">57</td></tr><tr class="passedeven"><td><a href="#m65"><b>testRepaint</b>  </a></td><td class="numi">1</td><td>1711001369963</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="2">com.github.vitalibo.brickgame.util.BuilderTest</td><td><a href="#m66"><b>testMap</b>  </a></td><td class="numi">1</td><td>1711001369963</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m67"><b>testWith</b>  </a></td><td class="numi">1</td><td>1711001369964</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="4">com.github.vitalibo.brickgame.util.CanvasTranslatorTest</td><td><a href="#m68"><b>testFrom</b>  </a></td><td class="numi">1</td><td>1711001369965</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m69"><b>testFromStream</b>  </a></td><td class="numi">3</td><td>1711001369966</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m70"><b>testFromStream</b>  </a></td><td class="numi">3</td><td>1711001369966</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m71"><b>testFromStream</b>  </a></td><td class="numi">3</td><td>1711001369966</td><td class="numi">2</td></tr>
+<tr class="passedodd"><td rowspan="5">com.github.vitalibo.brickgame.game.race.CarTest</td><td><a href="#m72"><b>testCarCrashed</b>  </a></td><td class="numi">1</td><td>1711001369969</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m73"><b>testDown</b>  </a></td><td class="numi">1</td><td>1711001369970</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m74"><b>testLeft</b>  </a></td><td class="numi">1</td><td>1711001369972</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m75"><b>testRight</b>  </a></td><td class="numi">1</td><td>1711001369972</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m76"><b>testVerifyPassed</b>  </a></td><td class="numi">1</td><td>1711001369973</td><td class="numi">0</td></tr>
+<tr class="passedeven"><td rowspan="13">com.github.vitalibo.brickgame.core.ControllerTest</td><td><a href="#m77"><b>testChangePause</b>  </a></td><td class="numi">1</td><td>1711001370884</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m78"><b>testChangeSound</b>  </a></td><td class="numi">1</td><td>1711001370886</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m79"><b>testDelegateKeyPressed</b>  </a></td><td class="numi">5</td><td>1711001370888</td><td class="numi">5</td></tr><tr class="passedeven"><td><a href="#m80"><b>testDelegateKeyPressed</b>  </a></td><td class="numi">5</td><td>1711001370888</td><td class="numi">5</td></tr><tr class="passedeven"><td><a href="#m81"><b>testDelegateKeyPressed</b>  </a></td><td class="numi">5</td><td>1711001370888</td><td class="numi">5</td></tr><tr class="passedeven"><td><a href="#m82"><b>testDelegateKeyPressed</b>  </a></td><td class="numi">5</td><td>1711001370888</td><td class="numi">5</td></tr><tr class="passedeven"><td><a href="#m83"><b>testDelegateKeyPressed</b>  </a></td><td class="numi">5</td><td>1711001370888</td><td class="numi">5</td></tr><tr class="passedeven"><td><a href="#m84"><b>testNotDelegateKeyPressed</b>  </a></td><td class="numi">5</td><td>1711001370894</td><td class="numi">4</td></tr><tr class="passedeven"><td><a href="#m85"><b>testNotDelegateKeyPressed</b>  </a></td><td class="numi">5</td><td>1711001370894</td><td class="numi">4</td></tr><tr class="passedeven"><td><a href="#m86"><b>testNotDelegateKeyPressed</b>  </a></td><td class="numi">5</td><td>1711001370894</td><td class="numi">4</td></tr><tr class="passedeven"><td><a href="#m87"><b>testNotDelegateKeyPressed</b>  </a></td><td class="numi">5</td><td>1711001370894</td><td class="numi">4</td></tr><tr class="passedeven"><td><a href="#m88"><b>testNotDelegateKeyPressed</b>  </a></td><td class="numi">5</td><td>1711001370894</td><td class="numi">4</td></tr><tr class="passedeven"><td><a href="#m89"><b>testReset</b>  </a></td><td class="numi">1</td><td>1711001370899</td><td class="numi">3</td></tr>
+<tr class="passedodd"><td rowspan="1">com.github.vitalibo.brickgame.core.CountdownJobTest</td><td><a href="#m90"><b>testCountdown</b>  </a></td><td class="numi">1</td><td>1711001370903</td><td class="numi">100</td></tr>
+<tr class="passedeven"><td rowspan="23">com.github.vitalibo.brickgame.core.ui.DigitTest</td><td><a href="#m91"><b>testNotRepaint</b>  </a></td><td class="numi">1</td><td>1711001371233</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m92"><b>testPaintDigit</b>  </a></td><td class="numi">10</td><td>1711001371234</td><td class="numi">69</td></tr><tr class="passedeven"><td><a href="#m93"><b>testPaintDigit</b>  </a></td><td class="numi">10</td><td>1711001371234</td><td class="numi">69</td></tr><tr class="passedeven"><td><a href="#m94"><b>testPaintDigit</b>  </a></td><td class="numi">10</td><td>1711001371234</td><td class="numi">69</td></tr><tr class="passedeven"><td><a href="#m95"><b>testPaintDigit</b>  </a></td><td class="numi">10</td><td>1711001371234</td><td class="numi">69</td></tr><tr class="passedeven"><td><a href="#m96"><b>testPaintDigit</b>  </a></td><td class="numi">10</td><td>1711001371234</td><td class="numi">69</td></tr><tr class="passedeven"><td><a href="#m97"><b>testPaintDigit</b>  </a></td><td class="numi">10</td><td>1711001371234</td><td class="numi">69</td></tr><tr class="passedeven"><td><a href="#m98"><b>testPaintDigit</b>  </a></td><td class="numi">10</td><td>1711001371234</td><td class="numi">69</td></tr><tr class="passedeven"><td><a href="#m99"><b>testPaintDigit</b>  </a></td><td class="numi">10</td><td>1711001371234</td><td class="numi">69</td></tr><tr class="passedeven"><td><a href="#m100"><b>testPaintDigit</b>  </a></td><td class="numi">10</td><td>1711001371234</td><td class="numi">69</td></tr><tr class="passedeven"><td><a href="#m101"><b>testPaintDigit</b>  </a></td><td class="numi">10</td><td>1711001371234</td><td class="numi">69</td></tr><tr class="passedeven"><td><a href="#m102"><b>testRepaint</b>  </a></td><td class="numi">10</td><td>1711001371304</td><td class="numi">3</td></tr><tr class="passedeven"><td><a href="#m103"><b>testRepaint</b>  </a></td><td class="numi">10</td><td>1711001371304</td><td class="numi">3</td></tr><tr class="passedeven"><td><a href="#m104"><b>testRepaint</b>  </a></td><td class="numi">10</td><td>1711001371304</td><td class="numi">3</td></tr><tr class="passedeven"><td><a href="#m105"><b>testRepaint</b>  </a></td><td class="numi">10</td><td>1711001371304</td><td class="numi">3</td></tr><tr class="passedeven"><td><a href="#m106"><b>testRepaint</b>  </a></td><td class="numi">10</td><td>1711001371304</td><td class="numi">3</td></tr><tr class="passedeven"><td><a href="#m107"><b>testRepaint</b>  </a></td><td class="numi">10</td><td>1711001371304</td><td class="numi">3</td></tr><tr class="passedeven"><td><a href="#m108"><b>testRepaint</b>  </a></td><td class="numi">10</td><td>1711001371304</td><td class="numi">3</td></tr><tr class="passedeven"><td><a href="#m109"><b>testRepaint</b>  </a></td><td class="numi">10</td><td>1711001371304</td><td class="numi">3</td></tr><tr class="passedeven"><td><a href="#m110"><b>testRepaint</b>  </a></td><td class="numi">10</td><td>1711001371304</td><td class="numi">3</td></tr><tr class="passedeven"><td><a href="#m111"><b>testRepaint</b>  </a></td><td class="numi">10</td><td>1711001371304</td><td class="numi">3</td></tr><tr class="passedeven"><td><a href="#m112"><b>testSetIllegalValue</b>  </a></td><td class="numi">2</td><td>1711001371307</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m113"><b>testSetIllegalValue</b>  </a></td><td class="numi">2</td><td>1711001371307</td><td class="numi">1</td></tr>
+<tr class="passedodd"><td rowspan="5">com.github.vitalibo.brickgame.game.snake.DirectionTest</td><td><a href="#m114"><b>testReverse</b>  </a></td><td class="numi">5</td><td>1711001371308</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m115"><b>testReverse</b>  </a></td><td class="numi">5</td><td>1711001371308</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m116"><b>testReverse</b>  </a></td><td class="numi">5</td><td>1711001371308</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m117"><b>testReverse</b>  </a></td><td class="numi">5</td><td>1711001371308</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m118"><b>testReverse</b>  </a></td><td class="numi">5</td><td>1711001371308</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="14">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest</td><td><a href="#m119"><b>testCreate</b>  </a></td><td class="numi">7</td><td>1711001371310</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m120"><b>testCreate</b>  </a></td><td class="numi">7</td><td>1711001371310</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m121"><b>testCreate</b>  </a></td><td class="numi">7</td><td>1711001371310</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m122"><b>testCreate</b>  </a></td><td class="numi">7</td><td>1711001371310</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m123"><b>testCreate</b>  </a></td><td class="numi">7</td><td>1711001371310</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m124"><b>testCreate</b>  </a></td><td class="numi">7</td><td>1711001371310</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m125"><b>testCreate</b>  </a></td><td class="numi">7</td><td>1711001371310</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m126"><b>testGenerate</b>  </a></td><td class="numi">7</td><td>1711001371313</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m127"><b>testGenerate</b>  </a></td><td class="numi">7</td><td>1711001371313</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m128"><b>testGenerate</b>  </a></td><td class="numi">7</td><td>1711001371313</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m129"><b>testGenerate</b>  </a></td><td class="numi">7</td><td>1711001371313</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m130"><b>testGenerate</b>  </a></td><td class="numi">7</td><td>1711001371313</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m131"><b>testGenerate</b>  </a></td><td class="numi">7</td><td>1711001371313</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m132"><b>testGenerate</b>  </a></td><td class="numi">7</td><td>1711001371313</td><td class="numi">1</td></tr>
+<tr class="passedodd"><td rowspan="4">com.github.vitalibo.brickgame.core.ui.IconPanelTest</td><td><a href="#m133"><b>testNotRepaint</b>  </a></td><td class="numi">2</td><td>1711001371316</td><td class="numi">2</td></tr><tr class="passedodd"><td><a href="#m134"><b>testNotRepaint</b>  </a></td><td class="numi">2</td><td>1711001371316</td><td class="numi">2</td></tr><tr class="passedodd"><td><a href="#m135"><b>testRepaint</b>  </a></td><td class="numi">2</td><td>1711001371319</td><td class="numi">2</td></tr><tr class="passedodd"><td><a href="#m136"><b>testRepaint</b>  </a></td><td class="numi">2</td><td>1711001371319</td><td class="numi">2</td></tr>
+<tr class="passedeven"><td rowspan="2">com.github.vitalibo.brickgame.core.JobTest</td><td><a href="#m137"><b>testKill</b>  </a></td><td class="numi">1</td><td>1711001371371</td><td class="numi">51</td></tr><tr class="passedeven"><td><a href="#m138"><b>testPause</b>  </a></td><td class="numi">1</td><td>1711001371472</td><td class="numi">101</td></tr>
+<tr class="passedodd"><td rowspan="1">com.github.vitalibo.brickgame.core.KernelTest</td><td><a href="#m139"><b>testJob</b>  </a></td><td class="numi">1</td><td>1711001371578</td><td class="numi">102</td></tr>
+<tr class="passedeven"><td rowspan="7">com.github.vitalibo.brickgame.game.LifeTest</td><td><a href="#m140"><b>cleanUp</b>  </a></td><td class="numi">1</td><td>1711001371685</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m141"><b>testNotRepaint</b>  </a></td><td class="numi">1</td><td>1711001371686</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m142"><b>testRepaint</b>  </a></td><td class="numi">5</td><td>1711001371686</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m143"><b>testRepaint</b>  </a></td><td class="numi">5</td><td>1711001371686</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m144"><b>testRepaint</b>  </a></td><td class="numi">5</td><td>1711001371686</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m145"><b>testRepaint</b>  </a></td><td class="numi">5</td><td>1711001371686</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m146"><b>testRepaint</b>  </a></td><td class="numi">5</td><td>1711001371686</td><td class="numi">2</td></tr>
+<tr class="passedodd"><td rowspan="25">com.github.vitalibo.brickgame.game.snake.MapTest</td><td><a href="#m147"><b>testCrashOnBorder</b>  </a></td><td class="numi">4</td><td>1711001371690</td><td class="numi">3</td></tr><tr class="passedodd"><td><a href="#m148"><b>testCrashOnBorder</b>  </a></td><td class="numi">4</td><td>1711001371690</td><td class="numi">3</td></tr><tr class="passedodd"><td><a href="#m149"><b>testCrashOnBorder</b>  </a></td><td class="numi">4</td><td>1711001371690</td><td class="numi">3</td></tr><tr class="passedodd"><td><a href="#m150"><b>testCrashOnBorder</b>  </a></td><td class="numi">4</td><td>1711001371690</td><td class="numi">3</td></tr><tr class="passedodd"><td><a href="#m151"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m152"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m153"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m154"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m155"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m156"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m157"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m158"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m159"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m160"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m161"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m162"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m163"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m164"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m165"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m166"><b>testLoadingMap</b>  </a></td><td class="numi">16</td><td>1711001371694</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m167"><b>testUnmodifiableList</b>  </a></td><td class="numi">1</td><td>1711001371707</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m168"><b>testVerifyPassed</b>  </a></td><td class="numi">4</td><td>1711001371708</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m169"><b>testVerifyPassed</b>  </a></td><td class="numi">4</td><td>1711001371708</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m170"><b>testVerifyPassed</b>  </a></td><td class="numi">4</td><td>1711001371708</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m171"><b>testVerifyPassed</b>  </a></td><td class="numi">4</td><td>1711001371708</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="22">com.github.vitalibo.brickgame.game.snake.MouseTest</td><td><a href="#m172"><b>testEatMouse</b>  </a></td><td class="numi">1</td><td>1711001371709</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m173"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m174"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m175"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m176"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m177"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m178"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m179"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m180"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m181"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m182"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m183"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m184"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m185"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m186"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m187"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m188"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m189"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m190"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m191"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m192"><b>testNextPoint</b>  </a></td><td class="numi">20</td><td>1711001371711</td><td class="numi">6</td></tr><tr class="passedeven"><td><a href="#m193"><b>testStream</b>  </a></td><td class="numi">1</td><td>1711001371717</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="8">com.github.vitalibo.brickgame.core.ui.NumberPanelTest</td><td><a href="#m194"><b>testDigitSequence</b>  </a></td><td class="numi">3</td><td>1711001371717</td><td class="numi">3</td></tr><tr class="passedodd"><td><a href="#m195"><b>testDigitSequence</b>  </a></td><td class="numi">3</td><td>1711001371717</td><td class="numi">3</td></tr><tr class="passedodd"><td><a href="#m196"><b>testDigitSequence</b>  </a></td><td class="numi">3</td><td>1711001371717</td><td class="numi">3</td></tr><tr class="passedodd"><td><a href="#m197"><b>testOverflowValue</b>  </a></td><td class="numi">4</td><td>1711001371720</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m198"><b>testOverflowValue</b>  </a></td><td class="numi">4</td><td>1711001371720</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m199"><b>testOverflowValue</b>  </a></td><td class="numi">4</td><td>1711001371720</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m200"><b>testOverflowValue</b>  </a></td><td class="numi">4</td><td>1711001371720</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m201"><b>testSetIllegalValue</b>  </a></td><td class="numi">1</td><td>1711001371721</td><td class="numi">0</td></tr>
+<tr class="passedeven"><td rowspan="14">com.github.vitalibo.brickgame.core.NumberTest</td><td><a href="#m202"><b>testDec</b>  </a></td><td class="numi">3</td><td>1711001371721</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m203"><b>testDec</b>  </a></td><td class="numi">3</td><td>1711001371721</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m204"><b>testDec</b>  </a></td><td class="numi">3</td><td>1711001371721</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m205"><b>testDecStep</b>  </a></td><td class="numi">4</td><td>1711001371722</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m206"><b>testDecStep</b>  </a></td><td class="numi">4</td><td>1711001371722</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m207"><b>testDecStep</b>  </a></td><td class="numi">4</td><td>1711001371722</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m208"><b>testDecStep</b>  </a></td><td class="numi">4</td><td>1711001371722</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m209"><b>testInc</b>  </a></td><td class="numi">3</td><td>1711001371723</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m210"><b>testInc</b>  </a></td><td class="numi">3</td><td>1711001371723</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m211"><b>testInc</b>  </a></td><td class="numi">3</td><td>1711001371723</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m212"><b>testIncStep</b>  </a></td><td class="numi">4</td><td>1711001371724</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m213"><b>testIncStep</b>  </a></td><td class="numi">4</td><td>1711001371724</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m214"><b>testIncStep</b>  </a></td><td class="numi">4</td><td>1711001371724</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m215"><b>testIncStep</b>  </a></td><td class="numi">4</td><td>1711001371724</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="14">com.github.vitalibo.brickgame.game.PointTest</td><td><a href="#m216"><b>testMoveDown</b>  </a></td><td class="numi">2</td><td>1711001371724</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m217"><b>testMoveDown</b>  </a></td><td class="numi">2</td><td>1711001371724</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m218"><b>testMoveLeft</b>  </a></td><td class="numi">2</td><td>1711001371725</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m219"><b>testMoveLeft</b>  </a></td><td class="numi">2</td><td>1711001371725</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m220"><b>testMoveRight</b>  </a></td><td class="numi">2</td><td>1711001371725</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m221"><b>testMoveRight</b>  </a></td><td class="numi">2</td><td>1711001371725</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m222"><b>testMoveUp</b>  </a></td><td class="numi">2</td><td>1711001371725</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m223"><b>testMoveUp</b>  </a></td><td class="numi">2</td><td>1711001371725</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m224"><b>testVerifyFailed</b>  </a></td><td class="numi">4</td><td>1711001371725</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m225"><b>testVerifyFailed</b>  </a></td><td class="numi">4</td><td>1711001371725</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m226"><b>testVerifyFailed</b>  </a></td><td class="numi">4</td><td>1711001371725</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m227"><b>testVerifyFailed</b>  </a></td><td class="numi">4</td><td>1711001371725</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m228"><b>testVerifyPassed</b>  </a></td><td class="numi">2</td><td>1711001371726</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m229"><b>testVerifyPassed</b>  </a></td><td class="numi">2</td><td>1711001371726</td><td class="numi">0</td></tr>
+<tr class="passedeven"><td rowspan="1">com.github.vitalibo.brickgame.game.race.RoadTest</td><td><a href="#m230"><b>testDown</b>  </a></td><td class="numi">1</td><td>1711001371727</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="2">com.github.vitalibo.brickgame.game.ShapeTest</td><td><a href="#m231"><b>testShapeEquals</b>  </a></td><td class="numi">2</td><td>1711001371727</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m232"><b>testShapeEquals</b>  </a></td><td class="numi">2</td><td>1711001371727</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="6">com.github.vitalibo.brickgame.game.snake.SnakeTest</td><td><a href="#m233"><b>testEatSelf</b>  </a></td><td class="numi">2</td><td>1711001371728</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m234"><b>testEatSelf</b>  </a></td><td class="numi">2</td><td>1711001371728</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m235"><b>testHead</b>  </a></td><td class="numi">1</td><td>1711001371729</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m236"><b>testInit</b>  </a></td><td class="numi">1</td><td>1711001371730</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m237"><b>testVerifyPassed</b>  </a></td><td class="numi">2</td><td>1711001371730</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m238"><b>testVerifyPassed</b>  </a></td><td class="numi">2</td><td>1711001371730</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="2">com.github.vitalibo.brickgame.core.StateTest</td><td><a href="#m239"><b>testChangeState</b>  </a></td><td class="numi">2</td><td>1711001371730</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m240"><b>testChangeState</b>  </a></td><td class="numi">2</td><td>1711001371730</td><td class="numi">1</td></tr>
+</table>
+<h1>Command line test</h1>
+<h2 id="m1">com.github.vitalibo.brickgame.core.ControllerTest:testChangeSound</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>3</td>
+<td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>2</td>
+<td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>5</td>
+<td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>6</td>
+<td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testGenerate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$281/0x000000084036a040@31a4db4f</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.O</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.github.vitalibo.brickgame.game.snake.MapTest:testCrashOnBorder</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>2</td>
+<td>0</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>snake crash init map border</p>
+com.github.vitalibo.brickgame.game.snake.Map.verifyCrashOnBorder(Map.java:26)
+<br/>at com.github.vitalibo.brickgame.game.snake.MapTest.testCrashOnBorder(MapTest.java:63)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">com.github.vitalibo.brickgame.game.LifeTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>[[false, false, false, false], [false, false, false, false], [false, false, false, false], [true, false, false, false]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=10, x=8)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>9</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">com.github.vitalibo.brickgame.game.race.CarTest:testVerifyPassed</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testGenerate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$282/0x000000084036a440@2842ef02</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.S</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>5</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">com.github.vitalibo.brickgame.game.LifeTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>3</td>
+<td>[[false, false, false, false], [true, false, false, false], [true, false, false, false], [true, false, false, false]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>4</td>
+<td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>8</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">com.github.vitalibo.brickgame.game.snake.MouseTest:testEatMouse</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">com.github.vitalibo.brickgame.core.JobTest:testKill</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">com.github.vitalibo.brickgame.game.PointTest:testMoveLeft</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>2</td>
+<td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m22">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>9</td>
+<td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m23">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testCreate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$272/0x000000084031b440@39b95a80</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.J</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=4, x=3)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">com.github.vitalibo.brickgame.game.snake.SnakeTest:testInit</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>6</td>
+<td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">com.github.vitalibo.brickgame.game.race.CarTest:testCarCrashed</h2>
+<div style="padding-left:3em">
+<p>car crashed</p>
+com.github.vitalibo.brickgame.game.race.Car.verifyCrash(Car.java:68)
+<br/>at com.github.vitalibo.brickgame.game.race.CarTest.testCarCrashed(CarTest.java:59)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">com.github.vitalibo.brickgame.game.PointTest:testVerifyFailed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>20</td>
+<td>0</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>The Y value must be in the range 0 - 19.</p>
+com.github.vitalibo.brickgame.game.Point.verify(Point.java:58)
+<br/>at com.github.vitalibo.brickgame.game.PointTest.testVerifyFailed(PointTest.java:37)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m29">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>6</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m30">com.github.vitalibo.brickgame.util.BuilderTest:testMap</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m31">com.github.vitalibo.brickgame.util.CanvasTranslatorTest:testFromStream</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m32">com.github.vitalibo.brickgame.core.ui.DigitTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m33">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=6, x=3)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m34">com.github.vitalibo.brickgame.core.NumberTest:testDecStep</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>100</td>
+<td>12345</td>
+<td>12445</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m35">com.github.vitalibo.brickgame.game.PointTest:testVerifyFailed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>10</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>The X value must be in the range 0 - 9.</p>
+com.github.vitalibo.brickgame.game.Point.verify(Point.java:54)
+<br/>at com.github.vitalibo.brickgame.game.PointTest.testVerifyFailed(PointTest.java:37)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m36">com.github.vitalibo.brickgame.core.ControllerTest:testDelegateKeyPressed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>37</td>
+<td>com.github.vitalibo.brickgame.core.ControllerTest$$Lambda$244/0x0000000840318440@279ab15e</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m37">com.github.vitalibo.brickgame.core.ControllerTest:testNotDelegateKeyPressed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>37</td>
+<td>com.github.vitalibo.brickgame.core.ControllerTest$$Lambda$244/0x0000000840318440@279ab15e</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m38">com.github.vitalibo.brickgame.core.ui.DigitTest:testPaintDigit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m39">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m40">com.github.vitalibo.brickgame.game.snake.DirectionTest:testReverse</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>DOWN</td>
+<td>UP</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m41">com.github.vitalibo.brickgame.game.PointTest:testMoveUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>19</td>
+<td>18</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m42">com.github.vitalibo.brickgame.game.snake.MapTest:testVerifyPassed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>2</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m43">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>4</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m44">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>2</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m45">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>8</td>
+<td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m46">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>5</td>
+<td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m47">com.github.vitalibo.brickgame.core.ui.DigitTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m48">com.github.vitalibo.brickgame.core.ui.DigitTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>6</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m49">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=3, x=1)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m50">com.github.vitalibo.brickgame.game.LifeTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>[[false, false, false, false], [false, false, false, false], [false, false, false, false], [false, false, false, false]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m51">com.github.vitalibo.brickgame.core.NumberTest:testInc</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>100</td>
+<td>101</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m52">com.github.vitalibo.brickgame.core.ControllerTest:testDelegateKeyPressed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>38</td>
+<td>com.github.vitalibo.brickgame.core.ControllerTest$$Lambda$242/0x000000084025cc40@25c548d1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m53">com.github.vitalibo.brickgame.game.tetris.BoardTest:testCleanUp</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m54">com.github.vitalibo.brickgame.core.ui.BrickTest:testPaintState</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>false</td>
+<td>java.awt.Color[r=97,g=112,b=91]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m55">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>12</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m56">com.github.vitalibo.brickgame.core.ControllerTest:testDelegateKeyPressed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>32</td>
+<td>com.github.vitalibo.brickgame.core.ControllerTest$$Lambda$246/0x0000000840318c40@5810772a</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m57">com.github.vitalibo.brickgame.core.NumberTest:testInc</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m58">com.github.vitalibo.brickgame.core.ControllerTest:testNotDelegateKeyPressed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>38</td>
+<td>com.github.vitalibo.brickgame.core.ControllerTest$$Lambda$242/0x000000084025cc40@25c548d1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m59">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m60">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>10</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m61">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>7</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m62">com.github.vitalibo.brickgame.game.race.CarTest:testDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m63">com.github.vitalibo.brickgame.core.ui.DigitTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>8</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m64">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testCreate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$276/0x0000000840368c40@eddc9bb</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.T</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m65">com.github.vitalibo.brickgame.core.StateTest:testChangeState</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>true</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m66">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>6</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m67">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>8</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m68">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=16, x=2)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m69">com.github.vitalibo.brickgame.core.ui.NumberPanelTest:testOverflowValue</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>100</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m70">com.github.vitalibo.brickgame.game.race.CarTest:testRight</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m71">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>9</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m72">com.github.vitalibo.brickgame.core.ui.DigitTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>7</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m73">com.github.vitalibo.brickgame.core.ui.DigitTest:testPaintDigit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m74">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=17, x=1)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m75">com.github.vitalibo.brickgame.game.PointTest:testMoveDown</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m76">com.github.vitalibo.brickgame.game.tetris.BoardTest:testInit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>7</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m77">com.github.vitalibo.brickgame.core.ControllerTest:testDelegateKeyPressed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>39</td>
+<td>com.github.vitalibo.brickgame.core.ControllerTest$$Lambda$245/0x0000000840318840@571c2ed8</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m78">com.github.vitalibo.brickgame.game.LifeTest:cleanUp</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m79">com.github.vitalibo.brickgame.core.ui.IconPanelTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>true</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m80">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>2</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m81">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=3, x=9)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m82">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>9</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m83">com.github.vitalibo.brickgame.core.KernelTest:testJob</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m84">com.github.vitalibo.brickgame.core.NumberTest:testDecStep</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>12345</td>
+<td>12345</td>
+<td>24690</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m85">com.github.vitalibo.brickgame.core.ControllerTest:testReset</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m86">com.github.vitalibo.brickgame.game.race.RoadTest:testDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m87">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=18, x=7)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m88">com.github.vitalibo.brickgame.core.NumberTest:testInc</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>12345</td>
+<td>12346</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m89">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>7</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m90">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=10, x=7)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m91">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>3</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m92">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=9, x=5)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m93">com.github.vitalibo.brickgame.core.StateTest:testChangeState</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>false</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m94">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m95">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m96">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>7</td>
+<td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m97">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=12, x=5)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m98">com.github.vitalibo.brickgame.core.ui.DigitTest:testSetIllegalValue</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>-1</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>The value must be in the range 0 - 9.</p>
+com.github.vitalibo.brickgame.core.ui.NumberPanel$Digit.set(NumberPanel.java:83)
+<br/>at com.github.vitalibo.brickgame.core.ui.DigitTest.testSetIllegalValue(DigitTest.java:72)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m99">com.github.vitalibo.brickgame.core.NumberTest:testDecStep</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>54321</td>
+<td>12345</td>
+<td>66666</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m100">com.github.vitalibo.brickgame.core.NumberTest:testIncStep</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>12345</td>
+<td>12345</td>
+<td>24690</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m101">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testGenerate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$284/0x000000084036ac40@aa794a3</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.Z</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m102">com.github.vitalibo.brickgame.core.ControllerTest:testNotDelegateKeyPressed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>32</td>
+<td>com.github.vitalibo.brickgame.core.ControllerTest$$Lambda$246/0x0000000840318c40@5810772a</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m103">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>9</td>
+<td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m104">com.github.vitalibo.brickgame.game.tetris.BoardTest:testInit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>5</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m105">com.github.vitalibo.brickgame.core.ui.BrickTest:testRepaint</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m106">com.github.vitalibo.brickgame.core.ui.DigitTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m107">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testCreate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$274/0x0000000840368440@402c9a60</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.O</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m108">com.github.vitalibo.brickgame.core.JobTest:testPause</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m109">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m110">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>6</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m111">com.github.vitalibo.brickgame.game.snake.MapTest:testVerifyPassed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m112">com.github.vitalibo.brickgame.game.LifeTest:testNotRepaint</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m113">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m114">com.github.vitalibo.brickgame.core.ui.NumberPanelTest:testDigitSequence</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>10</td>
+<td>0</td>
+<td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m115">com.github.vitalibo.brickgame.core.ControllerTest:testChangePause</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m116">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=11, x=3)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m117">com.github.vitalibo.brickgame.game.LifeTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>16</td>
+<td>[[true, true, true, true], [true, true, true, true], [true, true, true, true], [true, true, true, true]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m118">com.github.vitalibo.brickgame.core.ui.DigitTest:testPaintDigit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m119">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>7</td>
+<td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m120">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=10, x=2)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m121">com.github.vitalibo.brickgame.game.snake.SnakeTest:testHead</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m122">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=10, x=5)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m123">com.github.vitalibo.brickgame.game.tetris.BoardTest:testAdd</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m124">com.github.vitalibo.brickgame.core.NumberTest:testDecStep</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>5</td>
+<td>1</td>
+<td>6</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m125">com.github.vitalibo.brickgame.core.ui.BrickTest:testPaintState</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>true</td>
+<td>java.awt.Color[r=0,g=0,b=0]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m126">com.github.vitalibo.brickgame.game.tetris.BoardTest:testVerify</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m127">com.github.vitalibo.brickgame.core.NumberTest:testDec</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>100</td>
+<td>101</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m128">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>3</td>
+<td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m129">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>11</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m130">com.github.vitalibo.brickgame.game.PointTest:testVerifyPassed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m131">com.github.vitalibo.brickgame.game.snake.SnakeTest:testEatSelf</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Point(y=0, x=1)</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>snake ate itself</p>
+com.github.vitalibo.brickgame.game.snake.Snake.lambda$verifyEatSelf$0(Snake.java:33)
+<br/>at java.base/java.util.Optional.ifPresent(Optional.java:183)
+<br/>at com.github.vitalibo.brickgame.game.snake.Snake.verifyEatSelf(Snake.java:32)
+<br/>at com.github.vitalibo.brickgame.game.snake.SnakeTest.testEatSelf(SnakeTest.java:68)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m132">com.github.vitalibo.brickgame.core.NumberTest:testDec</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>12345</td>
+<td>12346</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m133">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>5</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m134">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testGenerate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$280/0x0000000840369c40@7a51dc38</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.L</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m135">com.github.vitalibo.brickgame.game.snake.MapTest:testCrashOnBorder</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>1</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>snake crash init map border</p>
+com.github.vitalibo.brickgame.game.snake.Map.verifyCrashOnBorder(Map.java:26)
+<br/>at com.github.vitalibo.brickgame.game.snake.MapTest.testCrashOnBorder(MapTest.java:63)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m136">com.github.vitalibo.brickgame.core.ui.NumberPanelTest:testOverflowValue</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>99</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m137">com.github.vitalibo.brickgame.game.snake.MouseTest:testStream</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m138">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testCreate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$277/0x0000000840369040@11e3d08</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.Z</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m139">com.github.vitalibo.brickgame.core.ui.NumberPanelTest:testSetIllegalValue</h2>
+<div style="padding-left:3em">
+<p>The value must be mere 0.</p>
+com.github.vitalibo.brickgame.core.ui.NumberPanel.set(NumberPanel.java:49)
+<br/>at com.github.vitalibo.brickgame.core.ui.NumberPanelTest.testSetIllegalValue(NumberPanelTest.java:42)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m140">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testCreate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$275/0x0000000840368840@7d43f1c9</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.S</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m141">com.github.vitalibo.brickgame.game.ShapeTest:testShapeEquals</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.Shape@43ca96a0</td>
+<td>com.github.vitalibo.brickgame.game.Shape@7c68a63c</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m142">com.github.vitalibo.brickgame.core.ui.DigitTest:testPaintDigit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>7</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m143">com.github.vitalibo.brickgame.util.CanvasTranslatorTest:testFrom</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m144">com.github.vitalibo.brickgame.game.snake.DirectionTest:testReverse</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>UP</td>
+<td>DOWN</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m145">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testGenerate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$278/0x0000000840369440@a926db4</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.I</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m146">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testGenerate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$279/0x0000000840369840@51e0f2eb</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.J</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m147">com.github.vitalibo.brickgame.game.ShapeTest:testShapeEquals</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.Shape@2b506a79</td>
+<td>com.github.vitalibo.brickgame.game.Shape@48b9773b</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m148">com.github.vitalibo.brickgame.util.CanvasTranslatorTest:testFromStream</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>5</td>
+<td>5</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m149">com.github.vitalibo.brickgame.core.ui.DigitTest:testPaintDigit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>9</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m150">com.github.vitalibo.brickgame.game.snake.DirectionTest:testReverse</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>RIGHT</td>
+<td>LEFT</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m151">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>3</td>
+<td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m152">com.github.vitalibo.brickgame.core.ControllerTest:testNotDelegateKeyPressed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>40</td>
+<td>com.github.vitalibo.brickgame.core.ControllerTest$$Lambda$243/0x0000000840318040@476a2819</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m153">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>4</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m154">com.github.vitalibo.brickgame.game.PointTest:testMoveRight</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>9</td>
+<td>8</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m155">com.github.vitalibo.brickgame.core.ui.IconPanelTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>false</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m156">com.github.vitalibo.brickgame.game.PointTest:testVerifyFailed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>-1</td>
+<td>0</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>The Y value must be in the range 0 - 19.</p>
+com.github.vitalibo.brickgame.game.Point.verify(Point.java:58)
+<br/>at com.github.vitalibo.brickgame.game.PointTest.testVerifyFailed(PointTest.java:37)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m157">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>3</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m158">com.github.vitalibo.brickgame.core.ui.NumberPanelTest:testDigitSequence</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>10</td>
+<td>1</td>
+<td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 1]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m159">com.github.vitalibo.brickgame.game.PointTest:testMoveRight</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m160">com.github.vitalibo.brickgame.core.NumberTest:testIncStep</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>5</td>
+<td>1</td>
+<td>6</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m161">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m162">com.github.vitalibo.brickgame.core.ui.DigitTest:testNotRepaint</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m163">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>8</td>
+<td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m164">com.github.vitalibo.brickgame.game.snake.MapTest:testVerifyPassed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m165">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m166">com.github.vitalibo.brickgame.core.NumberTest:testDec</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m167">com.github.vitalibo.brickgame.core.NumberTest:testIncStep</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>54321</td>
+<td>12345</td>
+<td>66666</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m168">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>15</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m169">com.github.vitalibo.brickgame.core.ui.DigitTest:testSetIllegalValue</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>10</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>The value must be in the range 0 - 9.</p>
+com.github.vitalibo.brickgame.core.ui.NumberPanel$Digit.set(NumberPanel.java:83)
+<br/>at com.github.vitalibo.brickgame.core.ui.DigitTest.testSetIllegalValue(DigitTest.java:72)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m170">com.github.vitalibo.brickgame.game.tetris.BoardTest:testInit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>15</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m171">com.github.vitalibo.brickgame.game.race.CarTest:testLeft</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m172">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>2</td>
+<td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m173">com.github.vitalibo.brickgame.core.NumberTest:testIncStep</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>100</td>
+<td>12345</td>
+<td>12445</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m174">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testBrickSize</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m175">com.github.vitalibo.brickgame.game.snake.DirectionTest:testReverse</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>NOT_DEFINED</td>
+<td>NOT_DEFINED</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m176">com.github.vitalibo.brickgame.core.ui.BrickTest:testNotRepaint</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m177">com.github.vitalibo.brickgame.core.ui.DigitTest:testPaintDigit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m178">com.github.vitalibo.brickgame.core.ui.DigitTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>5</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m179">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>4</td>
+<td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m180">com.github.vitalibo.brickgame.core.ui.DigitTest:testPaintDigit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>5</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m181">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>14</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m182">com.github.vitalibo.brickgame.game.snake.SnakeTest:testVerifyPassed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Point(y=5, x=5)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m183">com.github.vitalibo.brickgame.game.snake.MapTest:testCrashOnBorder</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>2</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>snake crash init map border</p>
+com.github.vitalibo.brickgame.game.snake.Map.verifyCrashOnBorder(Map.java:26)
+<br/>at com.github.vitalibo.brickgame.game.snake.MapTest.testCrashOnBorder(MapTest.java:63)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m184">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=6, x=6)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m185">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>13</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m186">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=18, x=6)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m187">com.github.vitalibo.brickgame.game.LifeTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>7</td>
+<td>[[true, false, false, false], [true, true, false, false], [true, true, false, false], [true, true, false, false]]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m188">com.github.vitalibo.brickgame.core.ui.IconPanelTest:testNotRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>true</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m189">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m190">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m191">com.github.vitalibo.brickgame.core.ui.DigitTest:testPaintDigit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m192">com.github.vitalibo.brickgame.game.snake.DirectionTest:testReverse</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>LEFT</td>
+<td>RIGHT</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m193">com.github.vitalibo.brickgame.game.PointTest:testVerifyPassed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>19</td>
+<td>9</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m194">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>7</td>
+<td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m195">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>6</td>
+<td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m196">com.github.vitalibo.brickgame.core.ui.DigitTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m197">com.github.vitalibo.brickgame.core.CountdownJobTest:testCountdown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m198">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m199">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=8, x=1)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m200">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m201">com.github.vitalibo.brickgame.util.BooleanCollectorTest:testToTwoDimensionalArray</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m202">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>5</td>
+<td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m203">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>7</td>
+<td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m204">com.github.vitalibo.brickgame.game.snake.MapTest:testCrashOnBorder</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>0</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>snake crash init map border</p>
+com.github.vitalibo.brickgame.game.snake.Map.verifyCrashOnBorder(Map.java:26)
+<br/>at com.github.vitalibo.brickgame.game.snake.MapTest.testCrashOnBorder(MapTest.java:63)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m205">com.github.vitalibo.brickgame.game.snake.MapTest:testUnmodifiableList</h2>
+<div style="padding-left:3em">
+<p>null</p>
+java.base/java.util.Collections$UnmodifiableCollection.add(Collections.java:1060)
+<br/>at com.github.vitalibo.brickgame.game.snake.Map.add(Map.java:18)
+<br/>at com.github.vitalibo.brickgame.game.snake.MapTest.testUnmodifiableList(MapTest.java:37)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m206">com.github.vitalibo.brickgame.core.ui.NumberPanelTest:testDigitSequence</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>10</td>
+<td>1234567890</td>
+<td>[1, 2, 3, 4, 5, 6, 7, 8, 9, 0]</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m207">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=1, x=3)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m208">com.github.vitalibo.brickgame.util.BooleanCollectorTest:testToArray</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m209">com.github.vitalibo.brickgame.game.snake.MapTest:testVerifyPassed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m210">com.github.vitalibo.brickgame.util.BuilderTest:testWith</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m211">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testGenerate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$283/0x000000084036a840@7e63374b</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.T</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m212">com.github.vitalibo.brickgame.game.PointTest:testMoveUp</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m213">com.github.vitalibo.brickgame.core.ui.DigitTest:testPaintDigit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>8</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m214">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>8</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m215">com.github.vitalibo.brickgame.core.ControllerTest:testNotDelegateKeyPressed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>39</td>
+<td>com.github.vitalibo.brickgame.core.ControllerTest$$Lambda$245/0x0000000840318840@571c2ed8</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m216">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>9</td>
+<td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m217">com.github.vitalibo.brickgame.core.ui.DigitTest:testPaintDigit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>6</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m218">com.github.vitalibo.brickgame.game.tetris.BoardTest:testIsFull</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m219">com.github.vitalibo.brickgame.core.ui.DigitTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m220">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=2), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=2, x=9)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m221">com.github.vitalibo.brickgame.game.snake.SnakeTest:testEatSelf</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Point(y=0, x=0)</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>snake ate itself</p>
+com.github.vitalibo.brickgame.game.snake.Snake.lambda$verifyEatSelf$0(Snake.java:33)
+<br/>at java.base/java.util.Optional.ifPresent(Optional.java:183)
+<br/>at com.github.vitalibo.brickgame.game.snake.Snake.verifyEatSelf(Snake.java:32)
+<br/>at com.github.vitalibo.brickgame.game.snake.SnakeTest.testEatSelf(SnakeTest.java:68)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m222">com.github.vitalibo.brickgame.game.snake.SnakeTest:testVerifyPassed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Point(y=0, x=2)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m223">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m224">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testCreate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$273/0x0000000840368040@3ec62141</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.L</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m225">com.github.vitalibo.brickgame.game.PointTest:testMoveLeft</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>9</td>
+<td>8</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m226">com.github.vitalibo.brickgame.game.tetris.BoardTest:testInit</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>9</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m227">com.github.vitalibo.brickgame.core.ControllerTest:testDelegateKeyPressed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>40</td>
+<td>com.github.vitalibo.brickgame.core.ControllerTest$$Lambda$243/0x0000000840318040@476a2819</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m228">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>8</td>
+<td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m229">com.github.vitalibo.brickgame.util.CanvasTranslatorTest:testFromStream</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>19</td>
+<td>9</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m230">com.github.vitalibo.brickgame.core.ui.DigitTest:testRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>9</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m231">com.github.vitalibo.brickgame.core.ui.IconPanelTest:testNotRepaint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>false</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m232">com.github.vitalibo.brickgame.game.snake.MapTest:testLoadingMap</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>5</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m233">com.github.vitalibo.brickgame.game.PointTest:testMoveDown</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>19</td>
+<td>18</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m234">com.github.vitalibo.brickgame.core.ui.NumberPanelTest:testOverflowValue</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>999</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m235">com.github.vitalibo.brickgame.core.ui.NumberPanelTest:testOverflowValue</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>10</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m236">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m237">com.github.vitalibo.brickgame.core.ui.BrickPanelTest:testDraw</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>4</td>
+<td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m238">com.github.vitalibo.brickgame.game.PointTest:testVerifyFailed</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>0</td>
+<td>-1</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>The X value must be in the range 0 - 9.</p>
+com.github.vitalibo.brickgame.game.Point.verify(Point.java:54)
+<br/>at com.github.vitalibo.brickgame.game.PointTest.testVerifyFailed(PointTest.java:37)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m239">com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest:testCreate</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>com.github.vitalibo.brickgame.game.tetris.tetromino.FactoryTest$$Lambda$271/0x000000084031b040@4b9ed99d</td>
+<td>class com.github.vitalibo.brickgame.game.tetris.tetromino.I</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m240">com.github.vitalibo.brickgame.game.snake.MouseTest:testNextPoint</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[Point(y=0, x=0), Point(y=0, x=1), Point(y=0, x=2), Point(y=0, x=3), Point(y=0, x=4), Point(y=0, x=5), Point(y=0, x=6), Point(y=0, x=7), Point(y=0, x=8), Point(y=0, x=9), Point(y=1, x=0), Point(y=1, x=1), Point(y=1, x=2), Point(y=1, x=3), Point(y=1, x=4), Point(y=1, x=5), Point(y=1, x=6), Point(y=1, x=7), Point(y=1, x=8), Point(y=1, x=9), Point(y=2, x=0), Point(y=2, x=1), Point(y=2, x=2), Point(y=2, x=3), Point(y=2, x=4), Point(y=2, x=5), Point(y=2, x=6), Point(y=2, x=7), Point(y=2, x=8), Point(y=2, x=9), Point(y=3, x=0), Point(y=3, x=1), Point(y=3, x=2), Point(y=3, x=3), Point(y=3, x=4), Point(y=3, x=5), Point(y=3, x=6), Point(y=3, x=7), Point(y=3, x=8), Point(y=3, x=9), Point(y=4, x=0), Point(y=4, x=1), Point(y=4, x=2), Point(y=4, x=3), Point(y=4, x=4), Point(y=4, x=5), Point(y=4, x=6), Point(y=4, x=7), Point(y=4, x=8), Point(y=4, x=9), Point(y=5, x=0), Point(y=5, x=1), Point(y=5, x=2), Point(y=5, x=3), Point(y=5, x=4), Point(y=5, x=5), Point(y=5, x=6), Point(y=5, x=7), Point(y=5, x=8), Point(y=5, x=9), Point(y=6, x=0), Point(y=6, x=1), Point(y=6, x=2), Point(y=6, x=3), Point(y=6, x=4), Point(y=6, x=5), Point(y=6, x=6), Point(y=6, x=7), Point(y=6, x=8), Point(y=6, x=9), Point(y=7, x=0), Point(y=7, x=1), Point(y=7, x=2), Point(y=7, x=3), Point(y=7, x=4), Point(y=7, x=5), Point(y=7, x=6), Point(y=7, x=7), Point(y=7, x=8), Point(y=7, x=9), Point(y=8, x=0), Point(y=8, x=1), Point(y=8, x=3), Point(y=8, x=4), Point(y=8, x=5), Point(y=8, x=6), Point(y=8, x=7), Point(y=8, x=8), Point(y=8, x=9), Point(y=9, x=0), Point(y=9, x=1), Point(y=9, x=2), Point(y=9, x=3), Point(y=9, x=4), Point(y=9, x=5), Point(y=9, x=6), Point(y=9, x=7), Point(y=9, x=8), Point(y=9, x=9), Point(y=10, x=0), Point(y=10, x=1), Point(y=10, x=2), Point(y=10, x=3), Point(y=10, x=4), Point(y=10, x=5), Point(y=10, x=6), Point(y=10, x=7), Point(y=10, x=8), Point(y=10, x=9), Point(y=11, x=0), Point(y=11, x=1), Point(y=11, x=2), Point(y=11, x=3), Point(y=11, x=4), Point(y=11, x=5), Point(y=11, x=6), Point(y=11, x=7), Point(y=11, x=8), Point(y=11, x=9), Point(y=12, x=0), Point(y=12, x=1), Point(y=12, x=2), Point(y=12, x=3), Point(y=12, x=4), Point(y=12, x=5), Point(y=12, x=6), Point(y=12, x=7), Point(y=12, x=8), Point(y=12, x=9), Point(y=13, x=0), Point(y=13, x=1), Point(y=13, x=2), Point(y=13, x=3), Point(y=13, x=4), Point(y=13, x=5), Point(y=13, x=6), Point(y=13, x=7), Point(y=13, x=8), Point(y=13, x=9), Point(y=14, x=0), Point(y=14, x=1), Point(y=14, x=2), Point(y=14, x=3), Point(y=14, x=4), Point(y=14, x=5), Point(y=14, x=6), Point(y=14, x=7), Point(y=14, x=8), Point(y=14, x=9), Point(y=15, x=0), Point(y=15, x=1), Point(y=15, x=2), Point(y=15, x=3), Point(y=15, x=4), Point(y=15, x=5), Point(y=15, x=6), Point(y=15, x=7), Point(y=15, x=8), Point(y=15, x=9), Point(y=16, x=0), Point(y=16, x=1), Point(y=16, x=2), Point(y=16, x=3), Point(y=16, x=4), Point(y=16, x=5), Point(y=16, x=6), Point(y=16, x=7), Point(y=16, x=8), Point(y=16, x=9), Point(y=17, x=0), Point(y=17, x=1), Point(y=17, x=2), Point(y=17, x=3), Point(y=17, x=4), Point(y=17, x=5), Point(y=17, x=6), Point(y=17, x=7), Point(y=17, x=8), Point(y=17, x=9), Point(y=18, x=0), Point(y=18, x=1), Point(y=18, x=2), Point(y=18, x=3), Point(y=18, x=4), Point(y=18, x=5), Point(y=18, x=6), Point(y=18, x=7), Point(y=18, x=8), Point(y=18, x=9), Point(y=19, x=0), Point(y=19, x=1), Point(y=19, x=2), Point(y=19, x=3), Point(y=19, x=4), Point(y=19, x=5), Point(y=19, x=6), Point(y=19, x=7), Point(y=19, x=8), Point(y=19, x=9)]</td>
+<td>Point(y=8, x=2)</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

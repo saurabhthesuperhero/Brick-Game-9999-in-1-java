@@ -45,3 +45,9 @@ launch game
 - `0003` Tetris
 - `0004` Shoot
 - `0005` Tanks# Brick-Game-9999-in-1-java
+
+
+
+This is fork of repository : https://github.com/vitalibo/Brick-Game-9999-in-1/tree/master
+
+While tetsing it didnt worked on ubuntu in 2024 so updated the code and also make it suitable for ubuntu.
